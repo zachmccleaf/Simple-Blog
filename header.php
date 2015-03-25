@@ -24,27 +24,25 @@
 		?>
 	</head>
 
-	<body <?php body_class();
+	<body <?php body_class("fs-grid");
 		// This will display a class specific to whatever is being loaded by Wordpress
 		// i.e. on a home page, it will return [class="home"]
 		// on a single post, it will return [class="single postid-{ID}"]
 		// and the list goes on. Look it up if you want more.
 		?>>
 
-		<header role="banner">
-			<div>
+		<header role="banner" class="fs-row">
+			<div class="fs-cell fs-lg-half">
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
 				</nav>
 			</div>
-			<div>
-				<div>
-					<h1>
-						<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Display the blog name ?></a>
-					</h1>
-					<h4>
-						<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>
-					</h4>
-				</div>
+			<div class="fs-cell fs-lg-half">
+				<h1>
+					<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Display the blog name ?></a>
+				</h1>
+				<h4>
+					<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>
+				</h4>
 			</div>
 		</header>
