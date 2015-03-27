@@ -49,10 +49,13 @@ add_action( 'widgets_init', 'simple_register_sidebars' );
 
 function simple_scripts()  {
 	// get the theme directory style.css and link to it in the header
+	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,900' , false, SIMPLE_VERSION, 'all' );
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/components/normalize.css/normalize.css' , false, SIMPLE_VERSION, 'all' );
 	wp_enqueue_style( 'formstone-grid', get_template_directory_uri() . '/components/formstone/dist/css/grid.css', false, SIMPLE_VERSION, 'all' );
 	wp_enqueue_style( 'simple-main', get_template_directory_uri() . '/css/main.css', false, SIMPLE_VERSION, 'all' );
 
-	// add fitvid
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/components/modernizr/modernizr.js' , array(), SIMPLE_VERSION, false );
+
 	wp_enqueue_script( 'simple-main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), SIMPLE_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'simple_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
