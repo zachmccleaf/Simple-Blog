@@ -13,15 +13,17 @@ get_header(); // This fxn gets the header.php file and renders it
 		<?php while ( have_posts() ) : the_post();
 		// If we have a page to show, start a loop that will display it
 		?>
-			<article>
-				<h1><?php the_title(); // Display the title of the page ?></h1>
-				<div>
-					<?php the_content();
-					// This call the main content of the page, the stuff in the main text box while composing.
-					// This will wrap everything in p tags
-					?>
+			<article class="first_article_title fs-row">
+				<h1 class="fs-cell fs-lg-all"><?php the_title(); // Display the title of the page ?></h1>
+				<div class="fs-row">
+					<div class="fs-cell fs-lg-all">
+						<?php the_content();
+						// This call the main content of the page, the stuff in the main text box while composing.
+						// This will wrap everything in p tags
+						?>
 
-					<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
+						<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
+					</div>
 				</div><!-- the-content -->
 			</article>
 		<?php endwhile; // OK, let's stop the page loop once we've displayed it ?>
@@ -31,5 +33,4 @@ get_header(); // This fxn gets the header.php file and renders it
 		</article>
 	<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
 </div>
-<?php get_sidebar(); // This fxn gets the sidebar.php file and renders it ?>
-<?php get_footer(); // This fxn gets the footer.php file and renders it ?>
+<?php get_footer(); get_sidebar();// This fxn gets the footer.php file and renders it ?>

@@ -4,6 +4,7 @@
 	/* rendering the page and display the footer area/content
 	/*-----------------------------------------------------------------------------------*/
 ?>
+		<?php get_sidebar(); ?>
 		<?php wp_footer();
 		// This fxn allows plugins to insert themselves/scripts/css/files (right here) into the footer of your website.
 		// Removing this fxn call will disable all kinds of plugins.

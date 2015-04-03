@@ -40,7 +40,7 @@
 					<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>
 				</h4>
 			</div>
-			<div class="fs-cell fs-lg-half">
+			<div class="fs-cell fs-lg-4">
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
 				</nav>

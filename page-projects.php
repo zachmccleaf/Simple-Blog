@@ -8,14 +8,20 @@
 	get_header(); // This fxn gets the header.php file and renders it
 ?>
 <div>
-	<?php if ( have_posts() ) :
+	<?php 
+
+	
+		$query = new WP_Query( array('post_type' => 'project', 'posts_per_page' => 5 ) );
+		
+
+		if ( $query->have_posts() ) :
 	// Do we have any posts in the databse that match our query?
 	// In the case of the home page, this will call for the most recent posts
 	?>
 		<?php
 			$i = 0;
 
-		while ( have_posts() ) : the_post();
+		while ( $query->have_posts() ) : $query->the_post();
 		// If we have some posts to show, start a loop that will display each one the same way
 		?>
 			<article class="fs-row <?php if (is_home() && $i === 0) echo 'first_article_title'?>">
@@ -61,7 +67,10 @@
 
 			$i++;
 
-		endwhile; // OK, let's stop the posts loop once we've exhausted our query/number of posts ?>
+		endwhile; // OK, let's stop the posts loop once we've exhausted our query/number of posts 
+
+		wp_reset_postdata();
+		?>
 	<nav>
 		<?php previous_posts_link( 'newer' ); // Display a link to  newer posts, if there are any, with the text 'newer' ?>
 		<?php next_posts_link( 'older' ); // Display a link to  older posts, if there are any, with the text 'older' ?>

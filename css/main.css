@@ -58,7 +58,6 @@ a:active, a:hover {
 	border-bottom: 5px solid #44BBD5;
 	font-weight: 900;
 	font-size: 44px;
-	color: #222
 }
 .date {
 	font-weight: 200;
@@ -67,3 +66,72 @@ a:active, a:hover {
 	color: #222;
 	margin: 20px 0 10px 0;
 }
+article h1 a{
+	color: #000;
+}
+article {
+	margin: 50px 0;
+}
+article a, .dot, footer a {
+	color: #44BBD5;
+}
+.dot {
+	display: inline;
+	margin: 0 5px;
+}
+footer {
+	background: #f0f0f0;
+	padding: 70px 0;
+	margin: 0;
+	height: 300px;
+}
+
+#searchsubmit {
+	background: #44BBD5;
+	border: none;
+	color: #fff;
+	font-style: italic;
+	width: 50px;
+}
+#searchsubmit p {
+	line-height: 0;
+	padding: 0 0 0 9px;
+}
+#s {
+	height: 33px;
+	line-height: 3.3;
+}
+footer ul li {
+	text-indent: -40px;
+	font-size: 16px;
+	font-style: italic;
+}
+footer h3 {
+	font-size: 12px;
+	color: #666;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+fieldset {
+	border: none;
+	padding: 0;
+}
+.gallery-item {
+	display: inline-block;
+	float: right;
+	margin: 20px;
+}
+.gallery {
+	display: inline-block;
+	margin: 0 auto;
+}
+.blog img {
+	float: right;
+}
+.blog p {
+	float: left;
+	width: 60%;
+}
+
+
+
